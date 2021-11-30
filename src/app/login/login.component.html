@@ -6,16 +6,16 @@
   <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
     <div class="card-body">
       <h4 class="card-title mb-4">Sign in</h4>
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <input name="" class="form-control" placeholder="Username" type="text">
+          <input name="username" class="form-control" placeholder="Username" type="text" formControlName="username" required>
         </div> <!-- form-group// -->
         <div class="form-group">
-          <input name="" class="form-control" placeholder="Password" type="password">
+          <input name="password" class="form-control" placeholder="Password" type="password" formControlName="password" required>
         </div> <!-- form-group// -->
 
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid">Login</button>
         </div> <!-- form-group// -->
       </form>
     </div> <!-- card-body.// -->
