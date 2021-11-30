@@ -1,25 +1,50 @@
 <head>
   <title>Account</title>
   <base href="/account">
-  <style>
-    img, h2{
-      display: inline;
-      padding: 3px;
-    }
-  </style>
 </head>
 <body>
-<section class="section-conten padding-y" style="min-height:100vh">
-  <div class="card mx-auto" style="max-width: 500px; margin-top:100px;">
-    <div class="card-body">
-      <img style="width: 50px; height: 50px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.iconscout.com%2Ficon%2Ffree%2Fpng-256%2Fprofile-417-1163876.png&f=1&nofb=1" alt="account">
-      <h2 class="card-title mb-4">Account</h2>
-      <div>Name: </div>
-      <div>Surname: </div>
-      <div>Username: </div>
-      <div>E-mail: </div>
-      <div>City: </div>
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-xl-20 col-md-12">
+        <div class="card user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+              <div class="card-block text-center text-white">
+                <div> <img src="./assets/logo/logo.png" class="img-radius" alt="User-Profile-Image"> </div>
+                <h6 class="f-w-600">{{currentUserSubject?.value.firstName}}</h6>
+                <p>Restyler</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <br><br>
+                <h2 class="m-b-20 p-b-5 b-b-default f-w-600">Account information</h2>
+                <br><br>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">First name</p>
+                    <h6 class="text-muted f-w-400">{{currentUserSubject?.value.firstName}}</h6><br>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Last Name</p>
+                    <h6 class="text-muted f-w-400">{{currentUserSubject?.value.lastName}}</h6><br>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Email</p>
+                    <h6 class="text-muted f-w-400">{{currentUserSubject?.value.email}}</h6><br>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">City</p>
+                    <h6 class="text-muted f-w-400">{{currentUserSubject?.value.city}}</h6><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</div>
 </body>

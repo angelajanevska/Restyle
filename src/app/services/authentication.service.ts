@@ -28,6 +28,16 @@ export class AuthenticationService {
     return loginSuccess;
   }
 
+  register (username:string,password:string,repeatPassword:string,firstName:string,lastName:string,email:string,city:string){
+    let registerSuccess = this.userService.register(username,password,repeatPassword,firstName,lastName,email,city);
+    if (registerSuccess == true) {
+      let user = this.userService.getUser(username);
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      this.currentUserSubject.next(user);
+    }
+    return registerSuccess;
+  }
+
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
