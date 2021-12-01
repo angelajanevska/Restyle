@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   // { path: '', component:HomeComponent },
@@ -31,7 +33,9 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     ProductDetailsComponent,
-    AddProductComponent
+    AddProductComponent,
+    ProductCardComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
