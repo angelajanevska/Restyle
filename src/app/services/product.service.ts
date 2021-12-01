@@ -14,7 +14,6 @@ export class ProductService {
 
   }
 
-  // private productList:<Product[]>JSON.parse();
 
   getProductByCode(code: string) {
     return this.products.find(x => x.code == code);

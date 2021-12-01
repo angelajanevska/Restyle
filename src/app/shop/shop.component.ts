@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../services/product.service";
+import {FormControl, FormGroup} from "@angular/forms";
+import {Product} from "../models/product";
 
 @Component({
   selector: 'app-shop',
@@ -16,6 +18,10 @@ export class ShopComponent implements OnInit {
       this.productList = result;
       this.isDataLoaded=true;
     })
+  }
+
+  onSubmit(){
+
   }
 
 }

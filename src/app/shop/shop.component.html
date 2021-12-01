@@ -143,14 +143,15 @@
           </div>
         </header><!-- sect-heading -->
 
+
         <div class="row" *ngIf="isDataLoaded">
 
-          <div class="col-md-4 staticCard"  *ngFor="let p of productList">
+          <div class="col-md-4 staticCard" *ngFor="let p of productList">
             <figure class="card card-product-grid">
               <!-- list products -->
               <div class="single-product">
                 <div class="product-img">
-                  <a href="#">
+                  <a [routerLink]="['/shop',p.code]">
                     <img class="default-img" src="{{p.image}}" alt="#">
                   </a>
                   <div class="button-head" style="justify-content: center">
