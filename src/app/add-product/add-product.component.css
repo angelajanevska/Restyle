@@ -1,0 +1,33 @@
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none
+}
+label.radio span {
+  padding: 2px 9px;
+  border: 2px solid #054A13;
+  display: inline-block;
+  color: #054A13;
+  border-radius: 3px;
+  text-transform: uppercase
+}
+
+label.radio input:checked+span {
+  border-color: #054A13;
+  background-color: #74B94A;
+  color: #fff
+}
+
+label.radio {
+  cursor: pointer
+}
+
+.form-group{
+  padding: 0;
+}
+
+#desc {
+  height: 70px;
+}
