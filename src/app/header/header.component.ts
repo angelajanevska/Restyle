@@ -20,6 +20,22 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
+  ifLoggedIn(){
+    this.authService.currentUser.subscribe(user=>{
+      if (user){
+        this.isLoggedIn=true;
+        console.log(user)
+      }else {
+        this.isLoggedIn=false;
+      }
+    });
+    if(this.isLoggedIn){
+      return "/addProduct"
+    }
+    else{
+      return "/login"
+    }
+  }
 
   onLogout(){
     this.authService.logout();

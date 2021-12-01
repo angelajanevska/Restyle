@@ -7,7 +7,7 @@ import {Product} from "../models/product";
 export class ProductService {
 
   private products:Product[]=[
-    new Product("","bluza",["male","female"],50,"desc","gm@gmail.com",new Date()),
+    new Product("","bluza",["male/female/kids","shirt/skirt/accessories"],50,"desc","gm@gmail.com",new Date()),
     new Product("","maica",["male","female"],50,"desc","gm@gmail.com",new Date())
   ];
 

@@ -28,7 +28,7 @@ export class AuthenticationService {
     return loginSuccess;
   }
 
-  register (username:string,password:string,repeatPassword:string,firstName:string,lastName:string,email:string,city:string){
+  register(username:string,password:string,repeatPassword:string,firstName:string,lastName:string,email:string,city:string){
     let registerSuccess = this.userService.register(username,password,repeatPassword,firstName,lastName,email,city);
     if (registerSuccess == true) {
       let user = this.userService.getUser(username);
