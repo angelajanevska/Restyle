@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AddProductComponent } from './add-product/add-product.component';
 import { ShopComponent } from './shop/shop.component';
 import {ProductCardComponent} from "./product-card/product-card.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   // { path: '', component:HomeComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

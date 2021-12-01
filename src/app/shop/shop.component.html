@@ -43,15 +43,9 @@
             </header>
             <div class="filter-content collapse show" id="collapse_1" style="">
               <div class="card-body">
-                <form class="pb-3">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                    <div class="input-group-append">
-                      <button class="btn btn-light" type="button"><i class="fa fa-search"></i></button>
-                    </div>
-                  </div>
-                </form>
+
                 <h6 class="title">What are you looking for?</h6>
+                <br>
                 <ul class="list-menu">
                   <li><a href="#" value="tshirts">T-shirts</a></li>
                   <li><a href="#" value="sweaters">Sweaters</a></li>
@@ -136,7 +130,7 @@
 
         <header class="border-bottom mb-4 pb-3">
           <div class="form-inline">
-            <span class="mr-md-auto">32 Items found </span>
+            <span class="mr-md-auto">{{productList ? productList.length : 0}} Items found </span>
             <button class="mr-2 form-control" value="latestItems">
               <option>Latest items</option>
             </button>
@@ -149,27 +143,23 @@
           </div>
         </header><!-- sect-heading -->
 
-        <div class="row">
+        <div class="row" *ngIf="isDataLoaded">
 
-
-          <div class="col-md-4" *ngFor="let p of productList">
+          <div class="col-md-4 staticCard"  *ngFor="let p of productList">
             <figure class="card card-product-grid">
               <!-- list products -->
               <div class="single-product">
                 <div class="product-img">
                   <a href="#">
-                    <img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
+                    <img class="default-img" src="{{p.image}}" alt="#">
                   </a>
-                  <div class="button-head">
-                    <div class="product-action">
-                      <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i></a>
-                      <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>
-                      <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>
-                    </div>
+                  <div class="button-head" style="justify-content: center">
+
+                  <p style="font-size: 20px">{{p.category}}</p>
                   </div>
                 </div>
                 <div class="product-content">
-                  <h3><p>{{p.name}}</p></h3>
+                  <h5 class="titleOfProduct"><p  class="titleOfProduct">{{p.productName}}</p></h5>
                   <div class="product-price">
                     <span>{{p.price}}denars</span>
                   </div>

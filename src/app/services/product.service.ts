@@ -1,29 +1,47 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {User} from "../models/user";
 import {Product} from "../models/product";
+import {HttpClient} from "@angular/common/http";
 
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class ProductService {
 
-  private products:Product[]=[
-    new Product("","bluza",["male/female/kids","shirt/skirt/accessories"],50,"desc","gm@gmail.com",new Date()),
-    new Product("","maica",["male","female"],50,"desc","gm@gmail.com",new Date())
-  ];
+  private products: Product[] = [];
 
-  getProductByCode(code:string){
-    return this.products.find(x=>x.code==code);
+
+  constructor(private http: HttpClient) {
+
   }
 
-  getProductByName(name:string){
-    return this.products.find(x=>x.name==name);
+  // private productList:<Product[]>JSON.parse();
+
+  getProductByCode(code: string) {
+    return this.products.find(x => x.code == code);
   }
 
-  getProducts(){
-    return this.products;
+  getProductByName(name: string) {
+    return this.products.find(x => x.name == name);
   }
 
-  addProduct(product:Product){
+  async getProducts() {
+    console.log(this.products)
+    if (this.products.length > 0) {
+      return this.products;
+    } else {
+      try {
+        let result = await this.http.get("assets/json/productData.json").toPromise() as any;
+        this.products = result.product;
+        return this.products;
+      } catch {
+        return this.products
+      }
+    }
+
+
+  }
+
+  addProduct(product: Product) {
     this.products.push(product);
   }
 

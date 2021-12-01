@@ -9,9 +9,13 @@ import {ProductService} from "../services/product.service";
 export class ShopComponent implements OnInit {
 
   constructor(private productService:ProductService) { }
-
-  productList=this.productService.getProducts();
-  ngOnInit(): void {
+  isDataLoaded:boolean=false;
+  productList:any;
+   ngOnInit(): void {
+    this.productService.getProducts().then(result => {
+      this.productList = result;
+      this.isDataLoaded=true;
+    })
   }
 
 }
