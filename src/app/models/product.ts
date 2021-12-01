@@ -7,8 +7,9 @@ export class Product{
   email:string;
   code:string;
   date:Date;
+  size:string;
 
-  constructor(image: string, name: string, category: string[], price: number, description: string, email: string,date:Date) {
+  constructor(image: string, name: string, category: string[], price: number, description: string, email: string,size:string,date:Date) {
     this.image = image;
     this.name = name;
     this.category = category;
@@ -17,6 +18,7 @@ export class Product{
     this.email = email;
     this.code = this.makeid();
     this.date=date;
+    this.size=size;
   }
 
   makeid() {

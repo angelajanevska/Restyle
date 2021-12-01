@@ -10,7 +10,7 @@ export class ProductService {
   private products: Product[] = [];
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,) {
 
   }
   async getProducts() {
