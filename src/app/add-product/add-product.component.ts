@@ -43,6 +43,7 @@ export class AddProductComponent implements OnInit {
     this.productService.addProduct(new Product(image, productName, [categoryGender,categoryType], price,
       description, this.email,size,new Date()));
     console.log(this.productService.getProducts())
+    this.addProductForm.reset();
   }
 
 }

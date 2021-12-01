@@ -16,9 +16,6 @@
                       <li><a href="/shop">Shop</a>
                       </li>
                       <li><a href="#">Why Restyle</a>
-                        <ul class="dropdown">
-                          <li><a href="#">Blog Single Sidebar</a></li>
-                        </ul>
                       </li>
                       <li><a href="#">Contact Us</a></li>
                       <li><a href="#" [href]="ifLoggedIn()">Add Product</a></li>
@@ -41,10 +38,7 @@
         <div class="col-lg-4 col-md-12 col-12">
           <!-- Top Left -->
           <div class="top-left">
-            <ul class="list-main">
-              <li><i class="ti-headphone-alt"></i> +000 (000) 000-000</li>
-              <li><i class="ti-email"></i>restyle.com</li>
-            </ul>
+            <img class="logoHeader" src="assets/logo/favicon.png">
           </div>
           <!--/ End Top Left -->
         </div>
@@ -53,12 +47,12 @@
           <div class="right-content">
             <ul class="list-main">
               <div *ngIf="isLoggedIn">
-                <li><i class="ti-user"></i> <a routerLink="/account">My account</a></li>
-                <li><i class="ti-power-off"></i><a (click)="onLogout()">Logout</a></li>
+                <li> <a routerLink="/account">My account</a></li>
+                <li style="padding: 10px 15px"><a (click)="onLogout()">Logout </a></li>
               </div>
               <div *ngIf="!isLoggedIn">
-                <li><i class="ti-power-off"></i><a routerLink="/login">Login</a></li>
-                <li><i class="ti-power-off"></i><a routerLink="/register">Register</a></li>
+                <li ><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/register">Register</a></li>
               </div>
             </ul>
           </div>

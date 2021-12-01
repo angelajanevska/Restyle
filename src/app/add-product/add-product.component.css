@@ -31,3 +31,10 @@ label.radio {
 #desc {
   height: 70px;
 }
+.card {
+  margin: 50px;
+}
+.section-content {
+  display: block;
+  float: none;
+}

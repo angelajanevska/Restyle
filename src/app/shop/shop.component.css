@@ -50,3 +50,11 @@ label.radio {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.list-menu li {
+  padding: 5px;
+  border-radius: 6px;
+}
+.list-menu li:hover{
+  background-color: #74B94A;
+  color: white;
+}

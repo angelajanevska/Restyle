@@ -36,13 +36,11 @@
           <article class="filter-group">
             <header class="card-header">
               <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
-                <i class="icon-control fa fa-chevron-down"></i>
-                <h6 class="title">Product type</h6>
+                <h6 class="title">Categories</h6>
               </a>
             </header>
             <div class="filter-content collapse show" id="collapse_1" style="">
               <div class="card-body">
-
                 <h6 class="title">What are you looking for?</h6>
                 <br>
                 <ul class="list-menu">
@@ -73,44 +71,11 @@
               </ul>
             </header>
 
-          </article> <!-- filter-group .// -->
-
-          <article class="filter-group">
-            <header class="card-header">
-              <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
-                <i class="icon-control fa fa-chevron-down"></i>
-                <h6 class="title">Price range </h6>
-              </a>
-            </header>
-            <div class="filter-content collapse show" id="collapse_3" style="">
-              <div class="card-body">
-                <input type="range" class="custom-range" min="0" max="100" name="">
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label>Min</label>
-                    <input class="form-control" placeholder="$0" type="number">
-                  </div>
-                  <div class="form-group text-right col-md-6">
-                    <label>Max</label>
-                    <input class="form-control" placeholder="$1,0000" type="number">
-                  </div>
-                </div> <!-- form-row.// -->
-                <button class="btn btn-block btn-primary">Apply</button>
-              </div><!-- card-body.// -->
-            </div>
-          </article> <!-- filter-group .// -->
-          <article class="filter-group">
-            <header class="card-header">
-              <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
-                <i class="icon-control fa fa-chevron-down"></i>
-                <h6 class="title">Sizes </h6>
-              </a>
-            </header>
             <div class="filter-content collapse show" id="collapse_4" style="">
               <div class="card-body">
                 <div class="form-row">
                   <div class="form-group">
-                    <label>Size</label> <br>
+                    <h6>Size</h6> <br>
                     <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label>
                     <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label>
                     <label class="radio"><input type="radio" name="size" value="L"> <span>L</span> </label>
@@ -122,23 +87,17 @@
               </div><!-- card-body.// -->
             </div>
           </article> <!-- filter-group .// -->
+           <!-- filter-group .// -->
         </div> <!-- card.// -->
-
+        <article class="filter-group">
+          <button class="btn btn-outline-success btn-block" style="border-radius: 6px; margin-top: 5px;">Filter</button>
+        </article>
       </aside> <!-- col.// -->
       <main class="col-md-9">
 
-        <header class="border-bottom mb-4 pb-3">
+        <header class="border-bottom mb-1 pb-3">
           <div class="form-inline">
             <span class="mr-md-auto">{{productList ? productList.length : 0}} Items found </span>
-            <button class="mr-2 form-control" value="latestItems">
-              <option>Latest items</option>
-            </button>
-            <div class="btn-group">
-              <a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="List view">
-                <i class="fa fa-bars"></i></a>
-              <a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Grid view">
-                <i class="fa fa-th"></i></a>
-            </div>
           </div>
         </header><!-- sect-heading -->
 
