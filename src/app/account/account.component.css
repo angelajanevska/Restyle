@@ -35,7 +35,7 @@ body {
 }
 
 .bg-c-lite-green {
-  background: linear-gradient(to right, #20BDFF, #A5FECB);
+  border:3px #A5FECB solid  ;
 }
 
 .user-profile {
@@ -103,6 +103,10 @@ h6 {
 .f-w-600 {
   font-weight: 600
 }
+.staticCard .col-md-4 {
+  margin: 0;
+  display: inline-block;
+}
 
 .m-b-20 {
   margin-bottom: 20px
@@ -143,4 +147,25 @@ h6 {
   margin:auto auto;
   width: 100%;
   padding: 10px;
+}
+.sellerProducts{
+  font-size: 24px;
+}
+.product-img{
+  box-sizing: border-box;
+
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.single-product{
+  margin: 10px;
+}
+
+.titleOfProduct {
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -13,18 +13,7 @@ export class ProductService {
   constructor(private http: HttpClient) {
 
   }
-
-
-  getProductByCode(code: string) {
-    return this.products.find(x => x.code == code);
-  }
-
-  getProductByName(name: string) {
-    return this.products.find(x => x.name == name);
-  }
-
   async getProducts() {
-    console.log(this.products)
     if (this.products.length > 0) {
       return this.products;
     } else {
@@ -36,9 +25,31 @@ export class ProductService {
         return this.products
       }
     }
-
-
   }
+
+  async getAllProductsWithEmail(email: string) {
+    if (this.products.length > 0) {
+      return this.products;
+    } else {
+      try {
+        let result = await this.http.get("assets/json/productData.json").toPromise() as any;
+        this.products = result.product;
+        return this.products.filter(x => x.email == email);
+      } catch {
+        return this.products.filter(x => x.email == email);
+      }
+    }
+  }
+
+  getProductByCode(code: string) {
+    return this.products.find(x => x.code == code);
+  }
+
+  getProductByName(name: string) {
+    return this.products.find(x => x.name == name);
+  }
+
+
 
   addProduct(product: Product) {
     this.products.push(product);

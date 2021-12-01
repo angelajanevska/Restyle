@@ -16,7 +16,6 @@
 </header> <!-- section-header.// -->
 
 
-
 <!-- ========================= SECTION PAGETOP ========================= -->
 <section class="section-pagetop bg">
   <div class="container">
@@ -54,7 +53,7 @@
                   <li><a href="#" value="pants">Pants</a></li>
                   <li><a href="#" value="coats">Coats</a></li>
                   <li><a href="#" value="scarfs">Scarfs</a></li>
-                  <li><a href="#" vvalue="bags">Bags</a></li>
+                  <li><a href="#" value="bags">Bags</a></li>
                   <li><a href="#" value="dresses">Dresses</a></li>
                   <li><a href="#" value="shirts">Shirts</a></li>
                 </ul>
@@ -155,14 +154,16 @@
                     <img class="default-img" src="{{p.image}}" alt="#">
                   </a>
                   <div class="button-head" style="justify-content: center">
-
                   <p style="font-size: 20px">{{p.category}}</p>
                   </div>
                 </div>
+
                 <div class="product-content">
+                  <a [routerLink]="['/shop',p.code]">
                   <h5 class="titleOfProduct"><p  class="titleOfProduct">{{p.productName}}</p></h5>
+                  </a>
                   <div class="product-price">
-                    <span>{{p.price}}denars</span>
+                    <span>{{p.price}} MKD</span>
                   </div>
                 </div>
               </div>

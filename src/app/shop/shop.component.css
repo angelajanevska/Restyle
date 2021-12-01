@@ -43,12 +43,9 @@ label.radio {
 .single-product{
   margin: 10px;
 }
-.default-img{
 
-}
 .titleOfProduct {
   width: 230px;
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
