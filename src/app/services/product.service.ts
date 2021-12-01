@@ -29,11 +29,12 @@ export class ProductService {
 
   async getAllProductsWithEmail(email: string) {
     if (this.products.length > 0) {
-      return this.products;
+      return this.products.filter(x => x.email == email);
     } else {
       try {
         let result = await this.http.get("assets/json/productData.json").toPromise() as any;
         this.products = result.product;
+
         return this.products.filter(x => x.email == email);
       } catch {
         return this.products.filter(x => x.email == email);
