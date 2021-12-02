@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {UsersService} from "../services/users.service";
-import {BehaviorSubject} from "rxjs";
-import {User} from "../models/user";
-import {ProductService} from "../services/product.service";
-import {Product} from "../models/product";
+import { UsersService } from "../services/users.service";
+import { ProductService } from "../services/product.service";
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-account',
@@ -12,17 +9,16 @@ import {Product} from "../models/product";
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  public currentUserSubject: BehaviorSubject<User | any>;
-  productList:any;
-list:any
-  constructor(public userService: UsersService, private productService:ProductService) {
-    this.currentUserSubject = new BehaviorSubject<User | undefined>(JSON.parse(localStorage.getItem('currentUser') as any));
+  productList: any;
+  list: any
+  currentUser: any;
+  isDataLoaded = false;
+  constructor(public userService: UsersService, private productService: ProductService, private authService: AuthenticationService) {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser') as any);
+    this.isDataLoaded = true;
   }
 
   ngOnInit(): void {
-    this.productService.getAllProductsWithEmail("gm@gmail.com").then(result => {
-      this.productList = result;
-    })
+    this.productList = this.productService.getAllProductsWithEmail(this.currentUser.email);
   }
-
 }
