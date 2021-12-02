@@ -33,11 +33,53 @@ export class ProductService {
     return this.products.filter(x => x.email == email);
   }
 
-  getAllProductsByFilter(size?: string, gender?: string, type?: string) {
-    let result = [... this.products].filter(x => x.size == size);
-    return result;
+  getAllProductsWithSize(size: string) {
+    return this.products.filter(x => x.size == size);
   }
+  //
+  // getAllProductsWithGender(gender: string) {
+  //   return this.products.filter(x => x.category[0] == gender);
+  // }
+  //
+  // getAllProductsByType(type: string) {
+  //   return this.products.filter(x => x.category[1] == type);
+  // }
 
+  // getAllProductsByFilter(size?: string, gender?: string, type?: string) {
+  //   let result = [... this.products];
+  //   if (size != null) {
+  //     result.filter(x => x.size == size);
+  //   }
+  //   if (gender != null) {
+  //    // result.filter(x => x.category.some(d => d == gender));
+  //     result.filter(x => x.category[1]== gender);
+  //   }
+  //   if (type != null) {
+  //    // result.filter(x => x.category.some(d => d == type));
+  //     result.filter(x => x.category[1]== type);
+  //   }
+  //   return result;
+  // }
+
+  getAllProductsByFilter(size?: string, gender?: string, type?: string) {
+     let result = [... this.products];
+    // if (size != null) {
+    //   this.products.filter(x => x.size == size);
+    // }
+    // if (gender != null) {
+    //   this.products.filter(x => x.category[0]== gender);
+    // }
+    // if (type != null) {
+    //   // result.filter(x => x.category.some(d => d == type));
+    //   this.products.filter(x => x.category[1]== type);
+    // }
+    // return this.products;
+   // console.log(result)
+    //result.filter(x => x.size == size).filter(x=>x.category[0]==gender).filter(x => x.category[1]== type)
+    result = [... this.products].filter(x => x.size == size).filter(x=>x.category[0]==gender).filter(x => x.category[1]== type);
+    console.log(result)
+    return result
+  }
   getProductByCode(code: string) {
     return this.products.find(x => x.code == code);
   }

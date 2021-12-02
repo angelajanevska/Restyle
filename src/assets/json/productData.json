@@ -5,7 +5,7 @@
          "productName":"Nude color sweater",
          "category":[
             "female",
-            "sweater"
+            "sweaters"
          ],
          "price":"400",
          "size":"L",
@@ -19,7 +19,7 @@
          "productName":"Grey sweater",
          "category":[
             "male",
-            "sweater"
+            "sweaters"
          ],
          "price":"450",
          "size":"M",
@@ -33,7 +33,7 @@
          "productName":"Pink sweatshirt",
          "category":[
             "female",
-            "sweater"
+            "sweaters"
          ],
          "price":"500",
          "size":"S",
@@ -358,9 +358,9 @@
             "accessories"
          ],
          "price":"300",
-         "size":"OneSize",
+         "size":"One Size",
          "description":"Black sunglasses girls accessories",
-         "email":"jjj@gmail.com",
+         "email":"as@gmail.com",
          "code":"1234567",
          "date":"12565654121"
       },
@@ -372,7 +372,7 @@
             "bags"
          ],
          "price":"200",
-         "size":"OneSize",
+         "size":"One Size",
          "description":"Black girl bag, the zipper does not work",
          "email":"nnn@gmail.com",
          "code":"9876541",
@@ -386,7 +386,7 @@
             "bags"
          ],
          "price":"350",
-         "size":"OneSize",
+         "size":"One Size",
          "description":"Small bag with zebra print, medium quality",
          "email":"mmm@gmail.com",
          "code":"4512369",
@@ -444,7 +444,7 @@
          "price":"400",
          "size":"M",
          "description":"Checked cotton woman pants, medium quality",
-         "email":"iii@gmail.com",
+         "email":"as@gmail.com",
          "code":"5555555",
          "date":"12565654121"
       }

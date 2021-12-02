@@ -26,35 +26,23 @@
         </div>
         <div class="form-group" style="display: inline-block; margin: 0">
 
+
           <div style="display: inline-block; margin-right: 20px" selectCat>
-            <label  style="display: block">Category</label>
-<!--            <select name="categoryGender" id="category" class="form-control" data-placeholder="Categories"-->
-<!--                    formControlName="categoryGender">-->
-<!--              <option value="male" ngValue="male">Male</option>-->
-<!--              <option value="female">Female</option>-->
-<!--              <option value="kids">Kids</option>-->
-<!--            </select>-->
-        <select formControlName="categoryGender">
-          <option *ngFor="let g of genders" [ngValue]="g">
-            {{g.name}}
-          </option>
-        </select>
-          </div>
-        </div>
-          <div style="display: inline-block" class="selectCat">
-            <label style="display: block">Type</label>
-            <select name="categoryType" id="categoryType" class="form-control" data-placeholder="CategoriesType" formControlName="categoryType">
-              <option value="tshirts">T-shirts</option>
-              <option value="sweaters">Sweaters</option>
-              <option value="skirts">Skirts</option>
-              <option value="accessories">Accessories</option>
-              <option value="jeans">Jeans</option>
-              <option value="jackets">Jackets</option>
-              <option value="coats">Coats</option>
-              <option value="scarfs">Scarfs</option>
-              <option value="bags">Bags</option>
+            <label style="display: block">Category</label>
+            <select formControlName="categoryGender">
+              <option *ngFor="let g of genders" [ngValue]="g">
+                {{g.name}}
+              </option>
             </select>
           </div>
+
+          <label style="display: block">Type</label>
+          <select formControlName="categoryType">
+            <option *ngFor="let c of categories" [ngValue]="c">
+              {{c.name}}
+            </option>
+          </select>
+        </div>
 
 
         <div class="form-group">
@@ -65,18 +53,24 @@
         <div class="form-row">
           <div class="form-group">
             <label>Size</label> <br>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="S"> <span>S</span> </label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="M"> <span>M</span> </label>
-            <label class="radio"><input type="radio" formControlName="size" name="size" value="L"> <span>L</span> </label>
-            <label class="radio"> <input type="radio"  formControlName="size" name="size" value="XL"> <span>XL</span> </label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="XXL"> <span>XXL</span></label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="OneSize"> <span>One Size</span> </label>
+            <label class="radio"> <input type="radio" formControlName="size" name="size" value="S"> <span>S</span>
+            </label>
+            <label class="radio"> <input type="radio" formControlName="size" name="size" value="M"> <span>M</span>
+            </label>
+            <label class="radio"><input type="radio" formControlName="size" name="size" value="L"> <span>L</span>
+            </label>
+            <label class="radio"> <input type="radio" formControlName="size" name="size" value="XL"> <span>XL</span>
+            </label>
+            <label class="radio"> <input type="radio" formControlName="size" name="size" value="XXL">
+              <span>XXL</span></label>
+            <label class="radio"> <input type="radio" formControlName="size" name="size" value="OneSize">
+              <span>One Size</span> </label>
 
           </div> <!-- form-group end.// -->
 
         </div> <!-- form-row.// -->
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block" [disabled]="!addProductForm.valid"> Add</button>
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!addProductForm.valid" > Add</button>
         </div> <!-- form-group// -->
       </form>
 

@@ -44,18 +44,18 @@
               <div class="card-body">
                 <h6 class="title">What are you looking for?</h6>
                 <br>
-                <ul class="list-menu">
-                  <li><a href="#" value="tshirts">T-shirts</a></li>
-                  <li><a href="#" value="sweaters">Sweaters</a></li>
-                  <li><a href="#" value="skirts">Skirts</a></li>
-                  <li><a href="#" value="accessories">Accessories </a></li>
-                  <li><a href="#" value="pants">Pants</a></li>
-                  <li><a href="#" value="coats">Coats</a></li>
-                  <li><a href="#" value="scarfs">Scarfs</a></li>
-                  <li><a href="#" value="bags">Bags</a></li>
-                  <li><a href="#" value="dresses">Dresses</a></li>
-                  <li><a href="#" value="shirts">Shirts</a></li>
-                </ul>
+                <select class="list-menu" formControlName="type">
+                  <option value="tshirts">T-shirts</option>
+                  <option value="sweaters">Sweaters</option>
+                  <option value="skirts">Skirts</option>
+                  <option value="accessories">Accessories</option>
+                  <option value="pants">Pants</option>
+                  <option value="coats">Coats</option>
+                  <option value="scarfs">Scarfs</option>
+                  <option value="bags">Bags</option>
+                  <option value="dresses">Dresses</option>
+                  <option value="shirts">Shirts</option>
+                </select>
 
               </div> <!-- card-body.// -->
             </div>
@@ -65,11 +65,12 @@
               <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
                 <h6 class="title">Select:</h6>
               </a>
-              <ul class="list-menu">
-                <li><a href="#" value="male">Male</a></li>
-                <li><a href="#" value="female">Female</a></li>
-                <li><a href="#" value="kids">Kids</a></li>
-              </ul>
+              <select class="list-menu" formControlName="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="kids">Kids</option>
+              </select>
+
             </header>
 
             <div class="filter-content collapse show" id="collapse_4" style="">
@@ -82,7 +83,7 @@
                     <label class="radio"><input formControlName="size" type="radio" name="size" value="L"> <span>L</span> </label>
                     <label class="radio"> <input formControlName="size" type="radio" name="size" value="XL"> <span>XL</span> </label>
                     <label class="radio"> <input formControlName="size" type="radio" name="size" value="XXL"> <span>XXL</span>
-                    </label> <label class="radio"> <input formControlName="size" type="radio" name="size" value="OneSize"> <span>One Size</span> </label>
+                    </label> <label class="radio"> <input formControlName="size" type="radio" name="size" value="One Size"> <span>One Size</span> </label>
                   </div> <!-- form-group end.// -->
                 </div> <!-- form-row.// -->
               </div><!-- card-body.// -->
@@ -91,7 +92,11 @@
            <!-- filter-group .// -->
         </div> <!-- card.// -->
         <article class="filter-group">
-          <button class="btn btn-outline-success btn-block" style="border-radius: 6px; margin-top: 5px;">Filter</button>
+          <button class="btn btn-outline-success btn-block" style="border-radius: 6px; margin-top: 5px;"
+                  type="submit" [disabled]="!filterForm.valid">Filter</button>
+
+<!--          [queryParams]="{ 'size' : this.filterForm.value.size,'type':this.filterForm.value.type}-->
+
         </article>
         </form>
       </aside> <!-- col.// -->

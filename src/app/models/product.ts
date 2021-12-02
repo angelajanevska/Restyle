@@ -1,6 +1,6 @@
 export class Product{
   image:string;
-  name:string;
+  productName:string;
   category:string[];
   price:number;
   description:string;
@@ -9,9 +9,9 @@ export class Product{
   date:Date;
   size:string;
 
-  constructor(image: string, name: string, category: string[], price: number, description: string, email: string,size:string,date:Date) {
+  constructor(image: string, productName: string, category: string[], price: number, description: string, email: string,size:string,date:Date) {
     this.image = image;
-    this.name = name;
+    this.productName = productName;
     this.category = category;
     this.price = price;
     this.description = description;
