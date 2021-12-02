@@ -62,7 +62,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   padding: 0;
-  height: 600px;
+  height: 500px;
 }
 /*.button{*/
 /*  position: relative;*/
@@ -74,3 +74,39 @@ body{
 /*.single-product{*/
 /*  height: 20px;*/
 /*}*/
+
+
+.section-title h2::before{
+  background-color: #3e8e41;
+}
+
+.single-banner{
+  max-width: 100%;
+  height: auto;
+}
+.single-banner img{
+  width:  405px;
+  height: 250px;
+
+}
+.single-banner .content{
+  width: 330px;
+}
+.single-banner .content p{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.single-banner .content p strong{
+  font-size: 28px;
+  color: #2ecc71;
+}
+.content .ecology{
+  height: fit-content;
+  width: auto;
+
+}
+.ecologyImg{
+  background: url("https://images.pexels.com/photos/2283496/pexels-photo-2283496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
