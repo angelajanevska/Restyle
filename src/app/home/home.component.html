@@ -35,7 +35,7 @@
           <img
             src="https://images.pexels.com/photos/1737779/pexels-photo-1737779.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="#">
-          <div class="content">
+          <div class="content air">
             <p>We breathe the same <strong>air</strong></p>
           </div>
         </div>
@@ -45,7 +45,7 @@
       <div class="col-lg-4 col-md-6 col-12">
         <div class="single-banner overlay ">
           <img src="https://www.ecotextile.com/images/stories/2020/September/Water_pollution.jpg" alt="#">
-          <div class="content">
+          <div class="content water">
             <p>We drink the same <strong>water</strong></p>
           </div>
         </div>
@@ -57,7 +57,7 @@
           <img
             src="https://images.pexels.com/photos/5433125/pexels-photo-5433125.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="#">
-          <div class="content">
+          <div class="content planet">
             <p>We walk on the same <strong>planet</strong></p>
 
           </div>
@@ -67,148 +67,17 @@
     </div>
   </div>
 </section>
-<!-- End Small Banner -->
-
-<!-- End Midium Banner -->
-
-<!--&lt;!&ndash; Start Most Popular&ndash;&gt;-->
-<!--&lt;!&ndash;baner so produkti&ndash;&gt;-->
-<!--<div class="product-area most-popular section">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-12">-->
-<!--        <div class="section-title">-->
-<!--          <h2>Recent products</h2>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--      <div class="col-12">-->
-<!--        <div class="owl-slider-carousel popular-slider">-->
-<!--          &lt;!&ndash; Start Single Product &ndash;&gt;-->
-<!--          <div class="single-product" *ngFor="let p of productList" >-->
-<!--            <div class="product-img">-->
-<!--              <div class="product-img">-->
-<!--                <a [routerLink]="['/shop',p.code]">-->
-<!--&lt;!&ndash;                  <img class="default-img" src="{{p.image}}" alt="#">&ndash;&gt;-->
-<!--                </a>-->
-<!--                <div class="button-head" style="justify-content: center">-->
-
-<!--                  <p style="font-size: 20px">{{p.category}}</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="product-content">-->
-<!--              <h5 class="titleOfProduct"><p  class="titleOfProduct">{{p.productName}}</p></h5>-->
-<!--              <div class="product-price">-->
-<!--                <span>{{p.price}}MKD</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          &lt;!&ndash; End Single Product &ndash;&gt;-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; End Most Popular Area&ndash;&gt;-->
-
-
 <div class="product-area most-popular section">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="section-title">
-          <h2>Recent products</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="owl-carousel popular-slider">
-          <!--                &lt;!&ndash;                <div  *ngFor="let p of productList">&ndash;&gt;-->
-          <!--                <div class="single-product" *ngFor="let p of productList">-->
-          <!--                  &lt;!&ndash; list products &ndash;&gt;-->
-          <!--                  <div class="product-img">-->
-          <!--                    <a [routerLink]="['/shop',p.code]">-->
-          <!--                      <img class="default-img" src="{{p.image}}" alt="#">-->
-          <!--                    </a>-->
-          <!--                    <div class="button-head" style="justify-content: center">-->
-          <!--                      <p style="font-size: 20px">{{p.category}}</p>-->
-          <!--                    </div>-->
-          <!--                  </div>-->
-
-          <!--                  <div class="product-content">-->
-          <!--                    <a [routerLink]="['/shop',p.code]">-->
-          <!--                      <h5 class="titleOfProduct"><p class="titleOfProduct">{{p.productName}}</p></h5>-->
-          <!--                    </a>-->
-          <!--                    <div class="product-price">-->
-          <!--                      <span>{{p.price}} MKD</span>-->
-          <!--                    </div>-->
-          <!--                  </div>-->
-
-          <!--                  &lt;!&ndash; list products//&ndash;&gt;-->
-          <!--                </div>-->
-          <!--                &lt;!&ndash;                </div>&ndash;&gt;-->
-
-          <!-- Start Single Product -->
-
-<!--          <div class="single-product col-md-4" *ngFor="let p of reverseList">-->
-<!--            <div class="product-img">-->
-<!--              <a [routerLink]="['/shop',p.code]">-->
-<!--                <img class="default-img" src="{{p.image}}" alt="#">-->
-<!--              </a>-->
-<!--              <div class="button-head" style="justify-content: center">-->
-<!--                <p style="font-size: 20px">{{p.category}}</p>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="product-content">-->
-<!--              <a [routerLink]="['/shop',p.code]">-->
-<!--                <h5 class="titleOfProduct"><p class="titleOfProduct">{{p.productName}}</p>-->
-<!--                </h5>-->
-<!--              </a>-->
-<!--              <div class="product-price">-->
-<!--                <span>{{p.price}} MKD</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          &lt;!&ndash; End Single Product &ndash;&gt;-->
-          <!-- Start Single Product -->
-          <div class="single-product col-md-4" *ngFor="let p of reverseList">
-            <div class="product-img">
-              <a href="#">
-                <img class="default-img" src="{{p.image}}" alt="#">
-                <img class="hover-img" src="{{p.image}}" alt="#">
-              </a>
-              <div class="button-head">
-<!--                <div class="product-action">-->
-<!--                  <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>-->
-<!--                  <a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add to Wishlist</span></a>-->
-<!--                  <a title="Compare" href="#"><i class="ti-bar-chart-alt"></i><span>Add to Compare</span></a>-->
-<!--                </div>-->
-                <div class="product-action-2">
-                  <a title="Add to cart" href="#">Add to cart</a>
-                </div>
-              </div>
-            </div>
-            <div class="product-content">
-              <h3><a href="#">Women Hot Collection</a></h3>
-              <div class="product-price">
-                <span>$50.00</span>
-              </div>
-            </div>
-          </div>
-          <!-- End Single Product -->
-
+          <h2>We give clothes a chance to be loved and used by someone else.</h2>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-<!-- Start Shop Home List  -->
 <section class="shop-home-list section">
   <div class="container">
     <div class="row">

@@ -19,6 +19,4 @@ export class HomeComponent implements OnInit {
       this.reverseList = this.productList.reverseList.slice(this.productList.length-3)
     })
   }
-
-
 }

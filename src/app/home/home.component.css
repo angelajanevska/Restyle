@@ -98,10 +98,10 @@ body{
   text-align: center;
 }
 
-.single-banner .content p strong{
-  font-size: 28px;
-  color: #2ecc71;
-}
+/*.single-banner .content p strong{*/
+/*  font-size: 28px;*/
+/*  color: #2ecc71;*/
+/*}*/
 .content .ecology{
   height: fit-content;
   width: auto;
@@ -109,4 +109,16 @@ body{
 }
 .ecologyImg{
   background: url("https://images.pexels.com/photos/2283496/pexels-photo-2283496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+.air p strong{
+  color: antiquewhite;
+  text-shadow: 2px 1px black;
+}
+.water p strong{
+  color: deepskyblue;
+  text-shadow: 2px 1px black;
+}
+.planet p strong{
+  color: #00e81d;
+  text-shadow: 2px 1px black;
 }

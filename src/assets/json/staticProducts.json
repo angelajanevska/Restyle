@@ -1,0 +1,130 @@
+{
+  "staticProduct": [
+    {
+      "imageStatic":"https://www.allthefallingstars.com/wp-content/uploads/2020/05/P7250506.jpg",
+      "productNameStatic":"Ring earings",
+      "categoryStatic":[
+        "female",
+        "accessories"
+      ],
+      "priceStatic":"400",
+      "sizeStatic":"One Size",
+      "descriptionStatic":"",
+      "emailStatic":"gm@gmail.com",
+      "codeStatic":"1865321",
+      "dateStatic":"12565654121"
+    },
+    {
+      "image":"https://i.pinimg.com/564x/d8/88/94/d888948462d2e612c90841491f8931b3.jpg",
+      "productName":"Black sunglasses",
+      "category":[
+        "female",
+        "accessories"
+      ],
+      "price":"300",
+      "size":"OneSize",
+      "description":"Black sunglasses girls accessories",
+      "email":"jjj@gmail.com",
+      "code":"1234567",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://www.fjallraven.com/4921cb/globalassets/catalogs/fjallraven/f7/f780/f78011/f662/7323450521226_fw19_a_solid_rewool_scarf_fjaellraeven_21.jpg?width=2000&height=2000&mode=BoxPad&bgcolor=fff&quality=80",
+      "productName":"Dark green scarf",
+      "category":[
+        "female",
+        "accessories"
+      ],
+      "price":"300",
+      "size":"One Size",
+      "description":"Dark green olive-color scarf.",
+      "email":"bba@gmail.com",
+      "code":"8555321",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://ae01.alicdn.com/kf/H477def96a0f14b8b954a30528d137c70W.jpg",
+      "productName":"Pink sweatshirt",
+      "category":[
+        "female",
+        "sweater"
+      ],
+      "price":"500",
+      "size":"S",
+      "description":"Short-waist pink sweatshirt",
+      "email":"jk@yahoo.com",
+      "code":"4789521",
+      "date":"15796444121"
+    },
+    {
+      "image":"https://global-uploads.webflow.com/5d556af3fe21d65f602dca94/5ef0a2ef51ef17a783edf2d6_Order%20%23538882%20%7C%20jamie%40somethingnavy.com%202.jpg",
+      "productName":"Nude color sweater",
+      "category":[
+        "female",
+        "sweater"
+      ],
+      "price":"400",
+      "size":"L",
+      "description":"Nude color sweater",
+      "email":"aaa@gmail.com",
+      "code":"1259874",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://i.pinimg.com/564x/05/aa/2f/05aa2fb03c53f8362cab439c29cea619.jpg",
+      "productName":"Black wool sweater",
+      "category":[
+        "female",
+        "sweaters"
+      ],
+      "price":"400",
+      "size":"L",
+      "description":"High quality black sweater, cotton and wool",
+      "email":"eee@gmail.com",
+      "code":"4564564",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/893E44B4248847338CD88E85BD79D361/10186027_r.jpg?fit=inside|140:140,https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/893E44B4248847338CD88E85BD79D361/10186027_r.jpg?fit=inside|220:220,https://imgs.michaels.com/MAM/assets/1/726D45CA1C364650A39CD1B336F03305/img/893E44B4248847338CD88E85BD79D361/10186027_r.jpg?fit=inside|540:540",
+      "productName":"tshirt",
+      "category":[
+        "male",
+        "tshirts"
+      ],
+      "price":"200",
+      "size":"M",
+      "description":"Blue tshirt with short sleeves, medium quality, cotton and polyester",
+      "email":"ccc@gmail.com",
+      "code":"1111111",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://images.sportsdirect.com/images/products/44488169_l.jpg",
+      "productName":"Purple tshirt with illustration",
+      "category":[
+        "female",
+        "tshirts"
+      ],
+      "price":"300",
+      "size":"S",
+      "description":"Purple tshirt with tree illustration, short sleeves, cotton, medium quality",
+      "email":"ggg@gmail.com",
+      "code":"8868339",
+      "date":"12565654121"
+    },
+    {
+      "image":"https://www.brother2brother.co.uk/images/black-white-embroidered-swallow-t-shirt-p19088-49633_zoom.jpg",
+      "productName":"Black tshirt with print",
+      "category":[
+        "male",
+        "tshirts"
+      ],
+      "price":"350",
+      "size":"L",
+      "description":"Blue tshirt with short sleeves and bird print, high quality",
+      "email":"ddd@gmail.com",
+      "code":"4568365",
+      "date":"12565654121"
+    }
+  ]
+}
