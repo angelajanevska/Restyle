@@ -1,0 +1,10 @@
+.price-inline h3{
+  display: inline;
+}
+.text-right{
+  color: #2ecc71;
+  font-size: 20px;
+}
+.card-right{
+  width: 200px;
+}
