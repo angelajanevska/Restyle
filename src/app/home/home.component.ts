@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   productList:any;
   reverseList:any;
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.productService.getProducts().then(result => {
       this.productList = result;
       this.isDataLoaded=true;
