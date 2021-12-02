@@ -56,18 +56,21 @@ body{
 }
 .single-slider{
   /*background-image: url("../../assets/photos/banner.png");*/
-  background-image: url("../../assets/photos/banner-new.png");
-	/*background-image: url('https://via.placeholder.com/1900x700');*/
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: url("../../assets/photos/untitled.png");
+  /*background-image: url('https://via.placeholder.com/1900x700');*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0;
   height: 600px;
 }
-.photo{
-
-}
-.button{
-  position: relative;
-  left: 10px;
-}
+/*.button{*/
+/*  position: relative;*/
+/*  left: 10px;*/
+/*}*/
+/*.product-area{*/
+/*  height: 950px;*/
+/*}*/
+/*.single-product{*/
+/*  height: 20px;*/
+/*}*/

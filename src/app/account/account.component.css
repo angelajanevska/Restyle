@@ -35,7 +35,8 @@ body {
 }
 
 .bg-c-lite-green {
-  border:3px #A5FECB solid  ;
+  /*border:3px darkgrey solid  ;*/
+  background: #D6EFC5;
 }
 
 .user-profile {
