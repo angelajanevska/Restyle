@@ -29,9 +29,7 @@ export class ShopComponent implements OnInit {
       this.productList = result;
       this.isDataLoaded=true;
     })
-
   }
-
 
   onSubmit(){
 
@@ -44,8 +42,19 @@ export class ShopComponent implements OnInit {
     //let r=this.productList
     //this.productList=this.productService.getAllProductsByFilter(size,gender,type)
     this.productService.getProducts().then(result => {
-      this.productList = result.filter(x => x.size == size).filter(x=>x.category[0]==gender).filter(x => x.category[1]== type);
-    })
+        if (this.filterForm.value.size != null) {
+          result = result.filter(x => x.size == this.filterForm.value.size);
+        }
+        //this.filterForm.value.category.indexOf(0)
+        if (gender != null) {
+          result = result.filter(x => x.category.some(d => d == gender));
+        }
+        if (type != null) {
+          result = result.filter(x => x.category.some(d => d == type));
+        }
+        this.productList = result;
+      });
+
   }
 
 }

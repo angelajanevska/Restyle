@@ -27,7 +27,6 @@ export class AddProductComponent implements OnInit {
     { name:'Skirts'},
     { name:'Accessories'},
     { name:'Jeans'},
-    { name:'Jackets'},
     { name:'Accessories'},
     { name:'Coats'},
     { name:'Scarfs'},
