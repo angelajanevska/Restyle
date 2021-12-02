@@ -10,6 +10,12 @@ import {Product} from "../models/product";
 })
 export class ShopComponent implements OnInit {
 
+  filterForm = new FormGroup({
+   // gender: new FormControl(''),
+   // type: new FormControl(''),
+    size: new FormControl(''),
+  });
+
   constructor(private productService:ProductService) { }
   isDataLoaded:boolean=false;
   productList:any;
@@ -22,6 +28,11 @@ export class ShopComponent implements OnInit {
 
   onSubmit(){
 
+  }
+
+  onFilter(){
+     const {size} = this.filterForm.value
+     this.productService.getAllProductsByFilter(size);
   }
 
 }

@@ -42,6 +42,23 @@ export class ProductService {
     }
   }
 
+  async getAllProductsByFilter(size?: string, gender?:string, type?:string) {
+    // var cloned = JSON.parse(JSON.stringify(this.http.get("assets/json/productData.json")));
+    // console.log(cloned)
+    if (this.products.length > 0) {
+      return this.products.filter(x => x.size == size);
+    } else {
+      try {
+        let result = await this.http.get("assets/json/productData.json").toPromise() as any;
+        this.products = result.product;
+
+        return this.products.filter(x => x.size == size);
+      } catch {
+        return this.products.filter(x => x.size == size);
+      }
+    }
+  }
+
   getProductByCode(code: string) {
     return this.products.find(x => x.code == code);
   }
