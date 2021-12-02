@@ -1,0 +1,33 @@
+.row{
+  height: 600px;
+  max-width: 1400px;
+}
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+}
+.contact-left{
+  background-image: url("../../assets/logo/contact-us-left.png");
+  min-width: 700px;
+  height: 551px;
+  position: absolute;
+  left: 10%;
+}
+.contact-right{
+  position: absolute;
+  top: 58%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+ }
+.contact-info{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-content{
+  background: linear-gradient(#F2F5F9,#B6C7E7);
+}
+a:hover {color:blue; font-style: oblique}
