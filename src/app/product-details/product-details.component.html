@@ -23,35 +23,36 @@
             <div class="col-sm-6">
               <div class="card-block">
                 <br><br>
-                <h2 class="m-b-20 p-b-5 b-b-default f-w-600">Product information</h2>
-                <br><br>
+                <h3 class="m-b-20 p-b-5 b-b-default f-w-600">Product information</h3>
+
                 <div class="row">
                   <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Product name</p>
-                    <h6 class="text-muted f-w-400">{{product.productName}}</h6><br>
+                    <p class="m-b-6 f-w-600">Product name</p>
+                    <h5 class=" f-w-400">{{product.productName}}</h5><br>
                   </div>
                   <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Seller's email</p>
-                    <h6 class="text-muted f-w-400"><div><a href="mailto:{{product.email}}"><u>{{product.email}}</u></a></div></h6><br>
+                    <p class="m-b-6 f-w-600">Category</p>
+                    <h5 class=" f-w-400">{{product.category}}</h5><br>
                   </div>
                   <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Price</p>
-                    <h6 class="text-muted f-w-400">{{product.price}}</h6><br>
+                    <p class="m-b-6 f-w-600">Price</p>
+                    <h5 class=" f-w-400">{{product.price}} MKD</h5><br>
                   </div>
                   <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Category</p>
-                    <h6 class="text-muted f-w-400">{{product.category}}</h6><br>
+                    <p class="m-b-6 f-w-600">Size</p>
+                    <h5 class=" f-w-400">{{product.size}}</h5><br>
                   </div>
-                  <div class="col-sm-6">
-                    <p class="m-b-10 f-w-600">Size</p>
-                    <h6 class="text-muted f-w-400">{{product.size}}</h6><br>
-                  </div>
-                  <br>
                   <div class="col-sm-12">
-                    <p class="m-b-10 f-w-600">Description</p>
-                    <h6 class="text-muted f-w-400 descText">{{product.description}}</h6><br>
+                    <p class="m-b-6 f-w-600">Description</p>
+                    <p style="font-size: 20px; color: black" class=" f-w-400 ">{{product.description}}</p><br>
                   </div>
-                  <div style="cursor: pointer" onclick="window.history.back()"><img style="width: 100px; margin-left: 10px" src="./assets/logo/back-button.png" alt=""></div>
+                  <div class="col-sm-6">
+                    <p class="m-b-6 f-w-600">Contact seller via e-mail</p>
+                    <h5 class=" f-w-400"><div><a href="mailto:{{product.email}}"><u>{{product.email}}</u></a></div></h5><br>
+                  </div>
+
+
+                  <div class="col-sm-12 goBackContainer" onclick="window.history.back()"><img class="goBackBtn"  src="./assets/logo/back-button.png" alt=""></div>
                 </div>
               </div>
             </div>

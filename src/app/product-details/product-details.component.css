@@ -171,3 +171,13 @@ label.radio input:checked+span {
   font-size: 15px;
   font-weight: lighter;
 }
+.goBackContainer{
+  cursor: pointer;
+  padding-top: 10px;
+
+}
+.goBackBtn{
+  width: 100px;
+  margin-right: 35px;
+  float: right
+}

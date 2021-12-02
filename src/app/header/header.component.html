@@ -48,11 +48,11 @@
             <ul class="list-main">
               <div *ngIf="isLoggedIn">
                 <li> <a routerLink="/account">My account</a></li>
-                <li style="padding: 10px 15px"><a (click)="onLogout()">Logout </a></li>
+                <li><a style="padding: 10px 15px" (click)="onLogout()">Logout </a></li>
               </div>
               <div *ngIf="!isLoggedIn">
                 <li ><a routerLink="/login">Login</a></li>
-                <li><a routerLink="/register">Register</a></li>
+                <li ><a style="padding: 10px 15px" routerLink="/register">Register  </a></li>
               </div>
             </ul>
           </div>

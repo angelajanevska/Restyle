@@ -21,7 +21,7 @@ export class ProductDetailsComponent implements OnInit {
   sub: any;
 
   ngOnInit() {
-
+    window.scrollTo(0, 0)
     this.sub = this.Activatedroute.paramMap.subscribe(params => {
       console.log(params);
       this.code = params.get('code');
