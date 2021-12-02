@@ -11,6 +11,7 @@ import {ProductCardComponent} from "./product-card/product-card.component";
 import {ShopComponent} from "./shop/shop.component";
 import {WishlistComponent} from "./wishlist/wishlist.component";
 import {WhyRestyleComponent} from "./why-restyle/why-restyle.component";
+import {ContactComponent} from "./contact/contact.component";
 
 const routes: Routes = [
   { path: '', component:HomeComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'shop/:code', component: ProductDetailsComponent},
   { path: 'account/:code', component: ProductDetailsComponent},
   { path: 'wishlist', component: WishlistComponent},
-  { path: 'why-Restyle', component: WhyRestyleComponent}
+  { path: 'why-Restyle', component: WhyRestyleComponent},
+  { path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({

@@ -18,6 +18,7 @@ import {ProductCardComponent} from "./product-card/product-card.component";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { WhyRestyleComponent } from './why-restyle/why-restyle.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   // { path: '', component:HomeComponent },
@@ -40,7 +41,8 @@ const routes: Routes = [
     ShopComponent,
     ProductCardComponent,
     WishlistComponent,
-    WhyRestyleComponent
+    WhyRestyleComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
