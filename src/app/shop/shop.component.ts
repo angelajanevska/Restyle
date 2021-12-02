@@ -29,7 +29,9 @@ export class ShopComponent implements OnInit {
       this.productList = result;
       this.isDataLoaded=true;
     })
-  }
+     window.scrollTo(0, 0)
+   }
+  p:any;
 
   onSubmit(){
 

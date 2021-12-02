@@ -4,7 +4,7 @@ import {ProductService} from "../services/product.service";
 import {Product} from "../models/product";
 import {UsersService} from "../services/users.service";
 import {AuthenticationService} from "../services/authentication.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
@@ -43,7 +43,7 @@ export class AddProductComponent implements OnInit {
 
   });
   constructor(private productService:ProductService,private userService:UsersService,
-              private authService:AuthenticationService) {
+              private authService:AuthenticationService,private router: Router) {
   }
 
   ngOnInit(): void {
@@ -58,6 +58,7 @@ export class AddProductComponent implements OnInit {
       description, this.email,size,new Date()));
     console.log(this.productService.getProducts())
     this.addProductForm.reset();
+    this.router.navigate(['/shop']);
   }
 
 }

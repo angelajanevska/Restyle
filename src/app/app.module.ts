@@ -19,6 +19,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { WhyRestyleComponent } from './why-restyle/why-restyle.component';
 import { ContactComponent } from './contact/contact.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 const routes: Routes = [
   // { path: '', component:HomeComponent },
@@ -50,10 +51,11 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,ShopComponent],
 })
 
 export class AppModule { }
