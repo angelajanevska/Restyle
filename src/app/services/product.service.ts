@@ -37,26 +37,7 @@ export class ProductService {
     return this.products.filter(x => x.size == size);
   }
 
-  getAllProductsByFilter(size?: string, gender?: string, type?: string) {
-   //   let result = this.getProducts().then(result =>{
-   //     if (size != null) {
-   //       result.filter(x => x.size == size);
-   //     }
-   //     if (gender != null) {
-   //       result.filter(x => x.category.some(d => d == type));
-   //       //result.filter(x => x.category[0]== gender);
-   //     }
-   //     if (type != null) {
-   //       result.filter(x => x.category.some(d => d == type));
-   //       //result.filter(x => x.category[1]== type);
-   //     }
-   //   });
-   // console.log(result)
-   //  //result.filter(x => x.size == size).filter(x=>x.category[0]==gender).filter(x => x.category[1]== type)
-   //  // result = [... this.products].filter(x => x.size == size).filter(x=>x.category[0]==gender).filter(x => x.category[1]== type);
-   //  // console.log(result)
-   //  return result;
-  }
+
   getProductByCode(code: string) {
     return this.products.find(x => x.code == code);
   }
@@ -71,6 +52,6 @@ export class ProductService {
   }
 
   getFromLocalStorage(){
-    return localStorage.getItem('products');
+    return JSON.parse(localStorage.getItem('products') as any);
   }
 }

@@ -45,8 +45,8 @@ export class AddProductComponent implements OnInit {
   });
   selectedFile: any;
   constructor(private productService: ProductService, private userService: UsersService,
-    private authService: AuthenticationService, private router: Router) {
-      document.title="Add product"
+              private authService: AuthenticationService, private router: Router) {
+    document.title="Add product"
   }
 
   ngOnInit(): void {
@@ -81,4 +81,3 @@ export class AddProductComponent implements OnInit {
 class ImageSnippet {
   constructor(public src: string, public file: File) { }
 }
-
