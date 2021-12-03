@@ -1,80 +1,77 @@
-<html>
-<head>
-  <title>New Product</title>
-  <base href="/addProduct">
-</head>
-<body>
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y">
 
   <!-- ============================ COMPONENT REGISTER   ================================= -->
   <div class="card mx-auto ">
     <article class="card-body">
-      <header class="mb-4"><h4 class="card-title">Add Product</h4></header>
+      <header class="mb-4">
+        <h4 class="card-title">Add Product</h4>
+      </header>
       <form class="form-div" [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
         <div class="left-div">
-        <div class="col form-group">
-          <label>Image</label>
-          <input type="text" class="form-control" formControlName="image" required>
-        </div> <!-- form-group end.// -->
-        <div class="col form-group">
-          <label>Product name</label>
-          <input type="text" class="form-control" formControlName="productName" required>
-        </div> <!-- form-group end.// -->
-        <div class="form-group">
-          <label>Price</label>
-          <input name="price" class="form-control" type="number" formControlName="price" required>
-        </div>
+          <div class="col form-group">
+            <label>Image</label>
+            <input #imageInput accept="image/*" type="file" name="filename" (change)="processImage(imageInput)">
+          </div> <!-- form-group end.// -->
+          <div class="col form-group">
+            <label>Product name</label>
+            <input type="text" class="form-control" formControlName="productName" required>
+          </div> <!-- form-group end.// -->
+          <div class="form-group">
+            <label>Price</label>
+            <input name="price" class="form-control" type="number" formControlName="price" required>
+          </div>
         </div>
         <div class="right-div">
-        <div class="form-group" style="margin: 0">
+          <div class="form-group" style="margin: 0">
 
-          <div style="display: inline-block; margin-right: 20px" selectCat>
-            <label style="display: block;">Category</label>
-            <select class="form-select" formControlName="categoryGender">
-              <option *ngFor="let g of genders" [ngValue]="g">
-                {{g.name}}
-              </option>
-            </select>
+            <div style="display: inline-block; margin-right: 20px" selectCat>
+              <label style="display: block;">Category</label>
+              <select class="form-select" formControlName="categoryGender">
+                <option *ngFor="let g of genders" [ngValue]="g">
+                  {{g.name}}
+                </option>
+              </select>
+            </div>
+
+            <div style="display: inline-block">
+              <label style="display: block">Type</label>
+              <select class="form-select" formControlName="categoryType">
+                <option *ngFor="let c of categories" [ngValue]="c">
+                  {{c.name}}
+                </option>
+              </select>
+            </div>
           </div>
 
-          <div style="display: inline-block">
-          <label style="display: block">Type</label>
-          <select class="form-select" formControlName="categoryType">
-            <option *ngFor="let c of categories" [ngValue]="c">
-              {{c.name}}
-            </option>
-          </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label style="padding-top: 10px">Description</label>
-          <!--          <input id="desc" type="text" class="form-control" formControlName="description" required>-->
-          <textarea id="desc" name="description" class="form-control" formControlName="description" required></textarea>
-        </div>
-        <div class="form-row">
           <div class="form-group">
-            <label>Size</label> <br>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="S"> <span>S</span>
-            </label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="M"> <span>M</span>
-            </label>
-            <label class="radio"><input type="radio" formControlName="size" name="size" value="L"> <span>L</span>
-            </label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="XL"> <span>XL</span>
-            </label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="XXL">
-              <span>XXL</span></label>
-            <label class="radio"> <input type="radio" formControlName="size" name="size" value="OneSize">
-              <span>One Size</span> </label>
+            <label style="padding-top: 10px">Description</label>
+            <textarea id="desc" name="description" class="form-control" formControlName="description"
+              required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Size</label> <br>
+              <label class="radio"> <input type="radio" formControlName="size" name="size" value="S"> <span>S</span>
+              </label>
+              <label class="radio"> <input type="radio" formControlName="size" name="size" value="M"> <span>M</span>
+              </label>
+              <label class="radio"><input type="radio" formControlName="size" name="size" value="L"> <span>L</span>
+              </label>
+              <label class="radio"> <input type="radio" formControlName="size" name="size" value="XL"> <span>XL</span>
+              </label>
+              <label class="radio"> <input type="radio" formControlName="size" name="size" value="XXL">
+                <span>XXL</span></label>
+              <label class="radio"> <input type="radio" formControlName="size" name="size" value="OneSize">
+                <span>One Size</span> </label>
 
-          </div> <!-- form-group end.// -->
+            </div> <!-- form-group end.// -->
 
-        </div> <!-- form-row.// -->
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block" [disabled]="!addProductForm.valid" href="/shop"> Add</button>
-        </div> <!-- form-group// -->
+          </div> <!-- form-row.// -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" [disabled]="!addProductForm.valid" href="/shop">
+              Add</button>
+          </div> <!-- form-group// -->
         </div>
       </form>
 
@@ -86,7 +83,3 @@
 
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
-
-
-</body>
-</html>
