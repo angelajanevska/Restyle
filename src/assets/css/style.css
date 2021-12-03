@@ -712,9 +712,9 @@
 .header.shop.v3 .middle-inner {
 	border:none;
 }
-.header.shop .header-inner {
-	background: #333;
-}
+/*.header.shop .header-inner {*/
+/*	background: #333;*/
+/*}*/
 .header.shop.v3 .header-inner {
 	background: transparent;
 }

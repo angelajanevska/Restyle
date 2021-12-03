@@ -12,7 +12,9 @@
                 <div class="navbar-collapse">
                   <div class="nav-inner">
                     <ul class="nav main-menu menu navbar-nav">
-                      <li class="active"><a href="#">Home</a></li>
+<!--                      <li class="active"><a href="#">Home</a></li>-->
+                      <li><a routerLink="/">Home</a>
+                      </li>
                       <li><a routerLink="/shop">Shop</a>
                       </li>
                       <li><a routerLink="/why-Restyle">Why Restyle</a>
@@ -48,7 +50,7 @@
             <ul class="list-main">
               <div *ngIf="isLoggedIn">
                 <li> <a routerLink="/account">My account</a></li>
-                <li><a style="padding: 10px 15px" (click)="onLogout()">Logout </a></li>
+                <li><a style="padding: 10px 15px; cursor: pointer" (click)="onLogout()">Logout </a></li>
               </div>
               <div *ngIf="!isLoggedIn">
                 <li ><a routerLink="/login">Login</a></li>
