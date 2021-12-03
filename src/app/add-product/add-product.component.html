@@ -10,7 +10,7 @@
       <form class="form-div" [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
         <div class="left-div">
           <div class="col form-group">
-            <label>Image</label>
+            <label>Image</label><br>
             <input #imageInput accept="image/*" type="file" name="filename" (change)="processImage(imageInput)">
           </div> <!-- form-group end.// -->
           <div class="col form-group">

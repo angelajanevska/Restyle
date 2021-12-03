@@ -23,14 +23,15 @@ export class AddProductComponent implements OnInit {
 
   categories = [
     { name: 'T-shirts' },
+    { name: 'Shirts'},
     { name: 'Sweaters' },
     { name: 'Skirts' },
     { name: 'Accessories' },
-    { name: 'Jeans' },
-    { name: 'Accessories' },
+    { name: 'Pants' },
+    { name: 'Dresses' },
     { name: 'Coats' },
     { name: 'Scarfs' },
-    { name: 'Bags' },
+    { name: 'Bags' }
   ]
   addProductForm = new FormGroup({
     productName: new FormControl(''),

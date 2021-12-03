@@ -177,9 +177,9 @@ label.radio input:checked+span {
 }
 
 .details-text{
-  color: #243238;
+  color: dimgray;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 15px;
   font-family: Helvetica,sans-serif;
 }
 
@@ -196,4 +196,7 @@ label.radio input:checked+span {
 }
 .email-text a:hover{
   color: forestgreen;
+}
+.color-p{
+  color: #243238;
 }
