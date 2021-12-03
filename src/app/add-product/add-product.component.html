@@ -8,10 +8,11 @@
 <section class="section-content padding-y">
 
   <!-- ============================ COMPONENT REGISTER   ================================= -->
-  <div class="card mx-auto" style="max-width:520px; margin-top:40px;position: relative;min-height: 80vh;">
+  <div class="card mx-auto ">
     <article class="card-body">
       <header class="mb-4"><h4 class="card-title">Add Product</h4></header>
-      <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+      <form class="form-div" [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <div class="left-div">
         <div class="col form-group">
           <label>Image</label>
           <input type="text" class="form-control" formControlName="image" required>
@@ -24,29 +25,31 @@
           <label>Price</label>
           <input name="price" class="form-control" type="number" formControlName="price" required>
         </div>
-        <div class="form-group" style="display: inline-block; margin: 0">
-
+        </div>
+        <div class="right-div">
+        <div class="form-group" style="margin: 0">
 
           <div style="display: inline-block; margin-right: 20px" selectCat>
-            <label style="display: block">Category</label>
-            <select formControlName="categoryGender">
+            <label style="display: block;">Category</label>
+            <select class="form-select" formControlName="categoryGender">
               <option *ngFor="let g of genders" [ngValue]="g">
                 {{g.name}}
               </option>
             </select>
           </div>
 
+          <div style="display: inline-block">
           <label style="display: block">Type</label>
-          <select formControlName="categoryType">
+          <select class="form-select" formControlName="categoryType">
             <option *ngFor="let c of categories" [ngValue]="c">
               {{c.name}}
             </option>
           </select>
+          </div>
         </div>
 
-
         <div class="form-group">
-          <label>Description</label>
+          <label style="padding-top: 10px">Description</label>
           <!--          <input id="desc" type="text" class="form-control" formControlName="description" required>-->
           <textarea id="desc" name="description" class="form-control" formControlName="description" required></textarea>
         </div>
@@ -72,6 +75,7 @@
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block" [disabled]="!addProductForm.valid" href="/shop"> Add</button>
         </div> <!-- form-group// -->
+        </div>
       </form>
 
     </article><!-- card-body.// -->
