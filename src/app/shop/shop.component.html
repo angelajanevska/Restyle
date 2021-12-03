@@ -45,7 +45,7 @@
                 <h6 class="title">What are you looking for?</h6>
                 <br>
                 <select class="list-menu form-select" formControlName="type">
-                  <option value="tshirts">T-shirts</option>
+                  <option value="t-shirts">T-shirts</option>
                   <option value="sweaters">Sweaters</option>
                   <option value="skirts">Skirts</option>
                   <option value="accessories">Accessories</option>
@@ -74,7 +74,7 @@
             </header>
 
             <div class="filter-content collapse show" id="collapse_4" style="">
-              <div class="card-body">
+              <div class="card-body size-div">
                 <div class="form-row">
                   <div class="form-group">
                     <h6>Size</h6> <br>
@@ -104,8 +104,9 @@
       <main class="col-md-9">
 
         <header class="border-bottom mb-1 pb-3">
-          <div class="form-inline">
-            <span class="mr-md-auto">{{productList ? productList.length : 0}} Items found </span>
+          <div class="form-inline col-md-12">
+            <span class="col-md-10">{{productList ? productList.length : 0}} Items found </span>
+            <button class="col-md-2 btn all-products-btn" (click)="allProducts()">All products</button>
           </div>
         </header><!-- sect-heading -->
 

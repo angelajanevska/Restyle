@@ -19,7 +19,7 @@ export class ShopComponent implements OnInit {
 
   //sub:any;
 
-  constructor(private productService:ProductService,private Activatedroute: ActivatedRoute) { }
+  constructor(private productService:ProductService) { }
 
   isDataLoaded:boolean=false;
   productList:any;
@@ -36,27 +36,31 @@ export class ShopComponent implements OnInit {
   onSubmit(){
 
   }
+  allProducts(){
+    if (this.filterForm.valid) {
+      console.log("Form Submitted!");
+      this.filterForm.reset();
+    }
+    this.productService.getProducts().then(result => {
+      this.productList = result;
+    })
+  }
+
 
   onFilter(){
-     const {size,type,gender} = this.filterForm.value;
-    console.log(size,type,gender);
-    //this.productList=this.productService.getAllProductsWithSize(size);
-    //let r=this.productList
-    //this.productList=this.productService.getAllProductsByFilter(size,gender,type)
-    this.productService.getProducts().then(result => {
-        if (this.filterForm.value.size != null) {
-          result = result.filter(x => x.size == this.filterForm.value.size);
-        }
-        //this.filterForm.value.category.indexOf(0)
-        if (gender != null) {
-          result = result.filter(x => x.category.some(d => d == gender));
-        }
-        if (type != null) {
-          result = result.filter(x => x.category.some(d => d == type));
-        }
-        this.productList = result;
-      });
+    const {size,type,gender} = this.filterForm.value;
+    let x = this.productService.getFromLocalStorage();
+    if (size != null) {
+      x = x.filter((x:any) => x.size == size);
+    }
+    if (gender != null) {
+      x = x.filter((x:any) => x.category.some((d:any) => d.toLowerCase() == gender));
+    }
+    if (type != null) {
+      x = x.filter((x:any) => x.category.some((d:any) => d.toLowerCase() == type));
+    }
 
+    this.productList = x;
   }
 
 }

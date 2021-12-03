@@ -57,5 +57,11 @@ label.radio {
 }
 .list-menu option::region{
   background-color: #74B94A;
-
+}
+.all-products-btn{
+  border-radius: 5px;
+  padding: 10px;
+}
+.size-div{
+  padding-bottom: 0;
 }
