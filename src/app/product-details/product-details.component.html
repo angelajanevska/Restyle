@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="page-content page-container" id="page-content">
-  <div class="padding">
+  <div>
     <div class="row container d-flex justify-content-center">
       <div class="col-xl-20 col-md-12">
         <div class="card product-card-full">
@@ -28,27 +28,27 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <p class="m-b-6 f-w-600">Product name</p>
-                    <h5 class=" f-w-400">{{product.productName}}</h5><br>
+                    <p class="details-text f-w-400">{{product.productName}}</p><br>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-6 f-w-600">Category</p>
-                    <h5 class=" f-w-400">{{product.category}}</h5><br>
+                    <p class="details-text f-w-400">{{product.category}}</p><br>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-6 f-w-600">Price</p>
-                    <h5 class=" f-w-400">{{product.price}} MKD</h5><br>
+                    <p class="details-text f-w-400">{{product.price}} MKD</p><br>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-6 f-w-600">Size</p>
-                    <h5 class=" f-w-400">{{product.size}}</h5><br>
+                    <p class="details-text f-w-400">{{product.size}}</p><br>
                   </div>
                   <div class="col-sm-12">
                     <p class="m-b-6 f-w-600">Description</p>
-                    <p style="font-size: 20px; color: black" class=" f-w-400 ">{{product.description}}</p><br>
+                    <p style="font-size: 16px; color: #243238; font-family: Helvetica,sans-serif;" class=" f-w-400 ">{{product.description}}</p><br>
                   </div>
                   <div class="col-sm-6">
                     <p class="m-b-6 f-w-600">Contact seller via e-mail</p>
-                    <h5 class=" f-w-400"><div><a href="mailto:{{product.email}}"><u>{{product.email}}</u></a></div></h5><br>
+                    <p class="details-text email-text f-w-400"><a href="mailto:{{product.email}}">{{product.email}}</a></p><br>
                   </div>
 
 

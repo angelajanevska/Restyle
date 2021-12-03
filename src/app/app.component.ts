@@ -8,21 +8,5 @@ import {AuthenticationService} from "./services/authentication.service";
 })
 export class AppComponent {
   title = 'angularshop';
-  // isLoggedIn=false;
-  //
-  // constructor(private authService:AuthenticationService) {
-  //   this.authService.currentUser.subscribe(user=>{
-  //     if (user){
-  //       this.isLoggedIn=true;
-  //     }else {
-  //       this.isLoggedIn=false;
-  //     }
-  //   });
-  // }
 
-  // onLogout(){
-  //   this.authService.logout();
-  // }
-
-  
 }

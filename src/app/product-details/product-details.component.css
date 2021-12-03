@@ -174,10 +174,26 @@ label.radio input:checked+span {
 .goBackContainer{
   cursor: pointer;
   padding-top: 10px;
-
 }
+
+.details-text{
+  color: #243238;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: Helvetica,sans-serif;
+}
+
 .goBackBtn{
   width: 100px;
   margin-right: 35px;
   float: right
+}
+.email-text{
+
+  font-size: 16px;
+  color: #243238;
+  font-family:Helvetica,sans-serif;
+}
+.email-text a:hover{
+  color: forestgreen;
 }
