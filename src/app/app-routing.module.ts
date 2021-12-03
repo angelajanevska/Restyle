@@ -20,7 +20,6 @@ const routes: Routes = [
   { path: 'account', component:AccountComponent,canActivate:[AuthGuard]},
   { path: 'addProduct', component:AddProductComponent },
   { path: 'shop', component:ShopComponent},
-  // { path: 'shop/:size/:type', component: ShopComponent},
   { path: 'shop/:code', component: ProductDetailsComponent},
   { path: 'account/:code', component: ProductDetailsComponent},
   { path: 'wishlist', component: WishlistComponent},
